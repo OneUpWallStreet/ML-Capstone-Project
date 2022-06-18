@@ -16,13 +16,13 @@ extension RegistrationViewController: RegistrationViewControllerDelegate {
     
     func loginWithEmail() {
 
-        AuthenticationManager.sharedInstance.InitialUserRegistration(user: UserRegistrationModel(email: "larrypage@google.com", fullName: "Larry Page", uniqueID: "DASDUHUH342FJSDF-DASASFSF-3534")) { isRegistrationSuccesful in
+        AuthenticationManager.sharedInstance.InitialUserRegistration(user: UserRegistrationModel(email: "muleyswarom@gmail.com", fullName: "Swarom Muley", uniqueID: "YASZUVUGT42FJSDF-MASATFSF-3534")) { isRegistrationSuccesful in
             if isRegistrationSuccesful {
                 UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
-                UserDefaults.standard.setValue("larrypage@google.com", forKey: "email")
-                UserDefaults.standard.setValue("Larry", forKey: "firstName")
-                UserDefaults.standard.setValue("Page", forKey: "lastName")
-                UserDefaults.standard.setValue("DASDUHUH342FJSDF-DASASFSF-3534", forKey: "userID")
+                UserDefaults.standard.setValue("muleyswarom@gmail.com", forKey: "email")
+                UserDefaults.standard.setValue("Swarom", forKey: "firstName")
+                UserDefaults.standard.setValue("Muley", forKey: "lastName")
+                UserDefaults.standard.setValue("YASZUVUGT42FJSDF-MASATFSF-3534", forKey: "userID")
                 UserDefaults.standard.setValue(0, forKey: "spamCounter")
                 NotificationCenter.default.post(name: .userRegistrationWasSuccesful, object: nil)
             }

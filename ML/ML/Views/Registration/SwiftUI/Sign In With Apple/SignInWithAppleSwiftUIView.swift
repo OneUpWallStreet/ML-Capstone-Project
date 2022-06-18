@@ -12,6 +12,7 @@ import AuthenticationServices
 struct SignInWithAppleSwiftUIView: View {
     var body: some View {
         SignInWithAppleButton(.signUp, onRequest: configure, onCompletion: handle)
+            .signInWithAppleButtonStyle(.black)
             .frame(width: 200, height: 60, alignment: .center)
     }
     

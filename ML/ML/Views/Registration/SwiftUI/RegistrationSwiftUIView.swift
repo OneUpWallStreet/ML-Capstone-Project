@@ -36,11 +36,18 @@ struct RegistrationSwiftUIView: View {
                 Button {
                     delegate?.loginWithEmail()
                 } label: {
-                    Text("Login With Facebook")
-                        .padding()
-                        .background(Color .blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
+                    HStack{
+                        Image("gmail")
+                            .resizable()
+                            .frame(width: 17.5, height: 17.5, alignment: .center)
+                        Text("Login With Email")
+                            .bold()
+                    }
+                    .frame(width: 200, height: 60, alignment: .center)
+//                    .padding()
+                    .background(Color .white)
+                    .foregroundColor(.black)
+                    .cornerRadius(5)
                 }
                 
                 SignInWithAppleSwiftUIView()
@@ -57,7 +64,7 @@ struct RegistrationSwiftUIView: View {
     }
     
     var backGroundImage: some View {
-        Image("2")
+        Image("back2")
             .resizable()
             .scaledToFill()
             .blur(radius: 0)
