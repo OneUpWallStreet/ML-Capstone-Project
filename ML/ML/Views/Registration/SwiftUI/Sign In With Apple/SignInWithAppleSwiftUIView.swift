@@ -38,6 +38,11 @@ struct SignInWithAppleSwiftUIView: View {
                                 
                                 if isUserRegistered {
                                     UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+                                    UserDefaults.standard.setValue(appleUser.email, forKey: "email")
+                                    UserDefaults.standard.setValue(appleUser.firstName, forKey: "firstName")
+                                    UserDefaults.standard.setValue(appleUser.lastName, forKey: "lastName")
+                                    UserDefaults.standard.setValue(appleUser.userID, forKey: "userID")
+                                    UserDefaults.standard.setValue(0, forKey: "spamCounter")
                                     NotificationCenter.default.post(name: .userRegistrationWasSuccesful, object: nil)
                                     return
                                 }
