@@ -61,11 +61,6 @@ def predict():
 	# my_prediction = clf.predict(vect)
 	# print("my Prediction: ",my_prediction)
 
-	
-
-	return {
-		"answer": "cat"
-	}
 	# return render_template('result.html',prediction = my_prediction)
 
 
